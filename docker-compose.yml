@@ -9,11 +9,11 @@ services:
       # - ${PWD}/grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboard.yaml
       # - ${PWD}/grafana/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
       # - ${PWD}/grafana/dashboards:/var/lib/grafana/dashboards
-      - ./grafana/data:/var/lib/grafana
+      - ${PWD}/grafana/data:/var/lib/grafana
   
   prometheus:
     image: prom/prometheus
     ports:
       - "9090:9090"
     volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ${PWD}/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
