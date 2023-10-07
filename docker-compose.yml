@@ -16,4 +16,4 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ${PWD}/prometheus/prometheus.yml:/etc/prometheus
+      - ${PWD}/prometheus/conf:/etc/prometheus
