@@ -1,8 +1,12 @@
 # grafana-prometheus
 grafana+prometheus
 
+## install
+chmod -R 777 grafana/data/
+
 ## node-exporter
 https://github.com/prometheus/node_exporter  
+https://grafana.com/grafana/dashboards/1860-node-exporter-full/  
 default port 9100:9100
 
 ```
