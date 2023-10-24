@@ -45,6 +45,21 @@ sudo docker run \
   --device=/dev/kmsg \
   gcr.io/cadvisor/cadvisor
 ```
+```
+sudo docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:ro \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --volume=/dev/disk/:/dev/disk:ro \
+  --publish=8080:8080 \
+  --detach=true \
+  --name=cadvisor \
+  --privileged \
+  --device=/dev/kmsg \
+  --restart=unless-stopped \
+  gcr.io/cadvisor/cadvisor
+```
 
 ## links
 https://www.youtube.com/watch?v=X_g-eJqiiLo  
