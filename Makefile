@@ -6,3 +6,6 @@ down:
 
 clean:
 	docker system prune -af
+
+restart-prom:
+	docker kill -s SIGHUP grafana-prometheus-prometheus-1
